@@ -1,3 +1,11 @@
+//We have lots of deployment dashboards where we have drop-down UI to select an application version to deploy.
+//We want to ensure that software version numbers delivered to our UI from the back-end API
+//are always ordered with the newest (highest) available version at the top.
+
+//Eg:
+//const input = [0.1.0, 3.2.1, 2.2.3, 0.1.1];
+//sortVersions(input) should return [3.2.1, 2.2.3, 0.1.1, 0.1.0];
+
 function sortVersions(v) {
   let arr = [];
   v.forEach(elem => {
